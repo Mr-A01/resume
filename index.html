@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="gargantua" data-space="1" data-motion="on" data-layout="modern" data-density="comfortable" data-photo="on" data-typo="grot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amir Jamaat — Senior Software Engineer · Full-Stack Developer</title>
+<meta name="description" content="Senior Software Engineer — resume. High-throughput platforms, automation systems, developer tooling.">
+<meta name="theme-color" content="#05060d">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Amir Jamaat — Senior Software Engineer · Full-Stack Developer">
+<meta property="og:description" content="High-throughput platforms, automation systems, developer tooling.">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://mra.dev">
+<script type="application/ld+json" id="jsonld">{}</script>
+
+<!-- Include Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/800.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@5/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/vazirmatn@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/vazirmatn@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/vazirmatn@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/vazirmatn@5/800.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: { colors: {
+  bg:'rgb(var(--bg)/<alpha-value>)', soft:'rgb(var(--soft)/<alpha-value>)',
+  card:'rgb(var(--card)/<alpha-value>)', chip:'rgb(var(--chip)/<alpha-value>)',
+  brd:'rgb(var(--brd)/<alpha-value>)', ink:'rgb(var(--ink)/<alpha-value>)',
+  mut:'rgb(var(--mut)/<alpha-value>)', acc:'rgb(var(--acc)/<alpha-value>)',
+  acc2:'rgb(var(--acc2)/<alpha-value>)'
+}, fontFamily: { body:['var(--ff-body)'], disp:['var(--ff-disp)'], mono:['var(--ff-mono)'] } } } };
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@11.11.17/dist/motion.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<canvas id="space-cv" aria-hidden="true"></canvas>
+<a href="#doc" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:start-2 focus:z-[100] focus:bg-acc focus:text-white focus:px-4 focus:py-2 focus:rounded-lg" data-i18n="skip">Skip to content</a>
+
+<div class="pd-bar no-print" role="toolbar" aria-label="PDF preview">
+  <div class="max-w-[820px] mx-auto px-3 sm:px-5 h-16 flex items-center gap-2 sm:gap-3">
+    <button class="btn btn-ghost" style="background:#fff;border-color:#d7d9de;color:#161a23" data-action="pd-back">
+      <i data-lucide="arrow-left" class="w-4 h-4 rtl-flip"></i><span data-i18n="preview_back">Back</span>
+    </button>
+    <span id="pd-pages" class="mono-label hidden sm:block" style="color:#5c6470"></span>
+    <span class="hidden md:block text-[11px] ms-auto" style="color:#5c6470" data-i18n="preview_hint">Choose “Save as PDF” as the destination in the print dialog.</span>
+    <button class="btn btn-primary ms-auto md:ms-0" data-action="pd-print">
+      <i data-lucide="printer" class="w-4 h-4"></i><span data-i18n="preview_print">Print / Save as PDF</span>
+    </button>
+  </div>
+</div>
+
+<header id="topbar" class="no-print fixed top-0 inset-x-0 z-50">
+  <div class="max-w-[1080px] mx-auto px-3 sm:px-6 h-14 flex items-center gap-1.5 sm:gap-2">
+    <span class="font-mono text-xs font-semibold flex items-center gap-1 me-1 shrink-0"><span class="t-acc">~/</span><span id="brand-name">resume</span></span>
+    <span class="hidden lg:inline mono-label ltr">A4 · PDF-ready · JSON-driven</span>
+    <div class="ms-auto flex items-center gap-1.5 sm:gap-2">
+      <div class="seg" role="group" aria-label="Language">
+        <button data-action="set-lang" data-value="en" id="seg-en" aria-pressed="false">EN</button>
+        <button data-action="set-lang" data-value="fa" id="seg-fa" aria-pressed="false">FA</button>
+      </div>
+      <div class="relative">
+        <button class="icon-btn" data-action="toggle-pop" data-pop="pop-settings" aria-haspopup="true" aria-expanded="false" aria-label="Settings" data-i18n-aria="settings"><i data-lucide="settings-2" class="w-4 h-4"></i></button>
+        <div id="pop-settings" class="pop rounded-xl p-1.5 hidden text-sm" style="background:rgb(var(--card));border:1px solid rgb(var(--brd));box-shadow:var(--sh)" role="menu">
+          <p class="mono-label px-3 pt-2 pb-1" data-i18n="layout">Layout</p>
+          <div class="opt-row px-2 pb-2">
+            <button class="opt-pill" data-opt="layout" data-value="modern" aria-pressed="true"><i data-lucide="columns-2" class="w-3.5 h-3.5"></i><span data-i18n="modern">Modern</span></button>
+            <button class="opt-pill" data-opt="layout" data-value="classic" aria-pressed="false"><i data-lucide="rows-3" class="w-3.5 h-3.5"></i><span data-i18n="classic">Classic</span></button>
+          </div>
+          <p class="mono-label px-3 pb-1" data-i18n="typography">Typography</p>
+          <div class="opt-row px-2 pb-2">
+            <button class="opt-pill" data-opt="typo" data-value="grot" aria-pressed="true"><span class="font-disp font-bold">Ag</span><span data-i18n="type_grot">Grotesk</span></button>
+            <button class="opt-pill" data-opt="typo" data-value="serif" aria-pressed="false"><span class="font-bold" style="font-family:'Source Serif 4',serif">Ag</span><span data-i18n="type_serif">Serif</span></button>
+          </div>
+          <p class="mono-label px-3 pb-1.5" data-i18n="accent">Accent color</p>
+          <div class="flex flex-wrap gap-2 px-3 pb-2" id="acc-row"></div>
+          <p class="mono-label px-3 pb-1" data-i18n="photo">Photo</p>
+          <div class="opt-row px-2 pb-2">
+            <button class="opt-pill" data-opt="photo" data-value="on" aria-pressed="true"><i data-lucide="image" class="w-3.5 h-3.5"></i><span data-i18n="show">Show</span></button>
+            <button class="opt-pill" data-opt="photo" data-value="off" aria-pressed="false"><i data-lucide="image-off" class="w-3.5 h-3.5"></i><span data-i18n="hide">Hide</span></button>
+          </div>
+          <p class="mono-label px-3 pb-1" data-i18n="density">Density</p>
+          <div class="opt-row px-2 pb-2">
+            <button class="opt-pill" data-opt="density" data-value="comfortable" aria-pressed="true"><i data-lucide="expand" class="w-3.5 h-3.5"></i><span data-i18n="comfortable">Comfortable</span></button>
+            <button class="opt-pill" data-opt="density" data-value="compact" aria-pressed="false"><i data-lucide="shrink" class="w-3.5 h-3.5"></i><span data-i18n="compact">Compact</span></button>
+          </div>
+          <p class="mono-label px-3 pb-1" data-i18n="motion">Space effects</p>
+          <div class="opt-row px-2 pb-2">
+            <button class="opt-pill" data-opt="motion" data-value="on" aria-pressed="true"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i><span data-i18n="show">Show</span></button>
+            <button class="opt-pill" data-opt="motion" data-value="off" aria-pressed="false"><i data-lucide="pause" class="w-3.5 h-3.5"></i><span data-i18n="hide">Hide</span></button>
+          </div>
+          <div class="hairline my-1"></div>
+          <p class="mono-label px-3 pt-1 pb-1.5" data-i18n="sections">Sections</p>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_highlights">Key highlights</span><button class="sw" data-sec="highlights" aria-pressed="true" aria-label="Toggle highlights"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_timeline">Career timeline</span><button class="sw" data-sec="timeline" aria-pressed="true" aria-label="Toggle timeline"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_casestudy">Case study</span><button class="sw" data-sec="casestudy" aria-pressed="true" aria-label="Toggle case study"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_projects">Projects</span><button class="sw" data-sec="projects" aria-pressed="true" aria-label="Toggle projects"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_testimonials">Testimonials</span><button class="sw" data-sec="testimonials" aria-pressed="true" aria-label="Toggle testimonials"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_speaking">Speaking & writing</span><button class="sw" data-sec="speaking" aria-pressed="true" aria-label="Toggle speaking"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_references">References</span><button class="sw" data-sec="references" aria-pressed="true" aria-label="Toggle references"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_practices">Practices</span><button class="sw" data-sec="practices" aria-pressed="true" aria-label="Toggle practices"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_community">Community</span><button class="sw" data-sec="community" aria-pressed="true" aria-label="Toggle community"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_achievements">Recognition</span><button class="sw" data-sec="achievements" aria-pressed="true" aria-label="Toggle achievements"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5"><span class="text-[13px]" data-i18n="sec_interests">Interests</span><button class="sw" data-sec="interests" aria-pressed="true" aria-label="Toggle interests"></button></div>
+          <div class="flex items-center justify-between px-3 py-1.5 pb-2"><span class="text-[13px]" data-i18n="sec_qr">QR code</span><button class="sw" data-sec="qr" aria-pressed="true" aria-label="Toggle QR"></button></div>
+        </div>
+      </div>
+      <div class="relative">
+        <button class="icon-btn" data-action="toggle-pop" data-pop="pop-theme" aria-haspopup="true" aria-expanded="false" aria-label="Theme" data-i18n-aria="theme"><i data-lucide="palette" class="w-4 h-4"></i></button>
+        <div id="pop-theme" class="pop rounded-xl p-1.5 hidden" style="background:rgb(var(--card));border:1px solid rgb(var(--brd));box-shadow:var(--sh)" role="menu"></div>
+      </div>
+      <div class="relative">
+        <button class="icon-btn" data-action="toggle-pop" data-pop="pop-data" aria-haspopup="true" aria-expanded="false" aria-label="Data" data-i18n-aria="data"><i data-lucide="file-json" class="w-4 h-4"></i></button>
+        <div id="pop-data" class="pop rounded-xl p-1.5 hidden text-sm" style="background:rgb(var(--card));border:1px solid rgb(var(--brd));box-shadow:var(--sh)" role="menu">
+          <button class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-chip text-start" data-action="import-json"><i data-lucide="upload" class="w-4 h-4 t-acc"></i><span data-i18n="import_json">Import JSON</span></button>
+          <button class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-chip text-start" data-action="export-json"><i data-lucide="download" class="w-4 h-4 t-acc"></i><span data-i18n="export_json">Export current JSON</span></button>
+          <button class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-chip text-start" data-action="download-vcard"><i data-lucide="contact" class="w-4 h-4 t-acc"></i><span data-i18n="vcard_btn">Download vCard (.vcf)</span></button>
+          <button class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-chip text-start" data-action="download-sample"><i data-lucide="file-down" class="w-4 h-4 t-acc"></i><span data-i18n="sample_json">Download example JSON</span></button>
+          <div class="hairline my-1"></div>
+          <button class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-chip text-start text-mut" data-action="reset-data"><i data-lucide="refresh-ccw" class="w-4 h-4"></i><span data-i18n="reset_data">Reset to sample</span></button>
+        </div>
+      </div>
+      <button class="btn btn-primary" data-action="print"><i data-lucide="printer" class="w-4 h-4"></i><span class="hidden sm:inline" data-i18n="download_pdf">Download PDF</span></button>
+    </div>
+  </div>
+  <div id="progress" aria-hidden="true"></div>
+</header>
+
+<main class="relative z-10 pt-24 pb-16 px-3 sm:px-6">
+  <div class="sheet max-w-[980px] mx-auto">
+    <div class="sheet-accent" aria-hidden="true"></div>
+    <div class="cosmos no-print pd-hide"><canvas id="bh-cv" aria-hidden="true"></canvas></div>
+    <div class="wm no-print" id="wm" aria-hidden="true"></div>
+    <div id="doc"></div>
+  </div>
+  <p class="pd-hide no-print max-w-[980px] mx-auto mt-5 text-center mono-label">
+    <span data-i18n="footer_note">JSON-driven resume — edit the data, the document follows.</span>
+    <button class="t-acc hover:underline font-mono ltr ms-1" data-action="download-sample">resume.json ↓</button>
+  </p>
+</main>
+
+<div id="toasts" aria-live="polite"></div>
+<input type="file" id="json-file" accept=".json,application/json" class="hidden" tabindex="-1" aria-hidden="true">
+<noscript><p style="padding:2rem;text-align:center">This resume requires JavaScript.</p></noscript>
+
+<script type="application/json" id="resume-data">
+{
+  "meta": { "updated": { "en": "Updated — August 2026", "fa": "به‌روزرسانی — اوت ۲۰۲۶" } },
+  "profile": {
+    "name": "Amir Jamaat",
+    "title": { "en": "Senior Software Engineer · Full-Stack Developer", "fa": "مهندس نرم‌افزار ارشد · توسعه‌دهنده فول‌استک" },
+    "tagline": { "en": "Full-Stack · Blockchain · Security · Automation · Systems", "fa": "فول‌استک · بلاکچین · امنیت · خودکارسازی · سیستم‌ها" },
+    "location": { "en": "Abhar, Iran", "fa": "ابهر، ایران" },
+    "email": "devmr.a01@gmail.com",
+    "phone": "+98 919 676 4796",
+    "website": "mra.dev",
+    "github": "github.com/Mr-A01",
+    "linkedin": "",
+    "photo": "img/MrA.png",
+    "available": { "en": "Open to Full-time · Part-time · Freelance · International / Remote", "fa": "آماده همکاری تمام‌وقت · پاره‌وقت · فریلنس · بین‌المللی / ریموت" }
+  },
+  "summary": {
+    "en": "Senior Software Engineer and Full-Stack Developer with extensive hands-on experience across web platforms, e-commerce, blockchain/Web3, cybersecurity, Telegram automation, distributed systems, Linux/server infrastructure, SEO and AI/LLM solutions. Delivered and contributed to 600+ web projects, including 15+ e-commerce projects and approximately 6 blockchain projects, with experience on platforms reaching about 1 million users. Strong in end-to-end product development, system architecture, API design, security, performance optimization, deployment and technical leadership. Led teams of up to 48 people and currently lead the technical development of NYX with a 10-person team.",
+    "fa": "مهندس نرم‌افزار ارشد و توسعه‌دهنده فول‌استک با تجربه عملی گسترده در پلتفرم‌های وب، تجارت الکترونیک، بلاکچین و Web3، امنیت سایبری، اتوماسیون تلگرام، سیستم‌های توزیع‌شده، زیرساخت لینوکس و سرور، SEO و راهکارهای AI/LLM. دارای سابقه توسعه و مشارکت در بیش از ۶۰۰ پروژه وب، شامل بیش از ۱۵ پروژه فروشگاهی و حدود ۶ پروژه بلاکچین، و تجربه کار روی پلتفرم‌هایی با حدود ۱ میلیون کاربر. متخصص در توسعه محصول از ابتدا تا انتها، معماری سیستم، طراحی API، امنیت، بهینه‌سازی عملکرد، استقرار و رهبری فنی. دارای تجربه رهبری تیم‌هایی تا ۴۸ نفر و در حال حاضر رهبر فنی توسعه NYX با تیمی ۱۰ نفره."
+  },
+  "industries": [
+    { "en": "E-commerce", "fa": "تجارت الکترونیک" }, { "en": "Blockchain / Web3", "fa": "بلاکچین / Web3" },
+    { "en": "Cybersecurity", "fa": "امنیت سایبری" }, { "en": "Telegram & Automation", "fa": "تلگرام و خودکارسازی" },
+    { "en": "Startups & SaaS", "fa": "استارتاپ و SaaS" }, { "en": "SEO & Digital Growth", "fa": "SEO و رشد دیجیتال" }
+  ],
+  "engagement": [
+    { "en": "Full-time", "fa": "تمام‌وقت" }, { "en": "Part-time", "fa": "پاره‌وقت" },
+    { "en": "Freelance", "fa": "فریلنس" }, { "en": "Technical Leadership", "fa": "رهبری فنی" } ,
+    { "en": "Staff roles", "fa": "نقش‌های Staff" }, { "en": "Consulting", "fa": "مشاوره" },
+    { "en": "Mentoring", "fa": "منتورینگ" }, { "en": "Open-source", "fa": "متن‌باز" }
+  ],
+  "competencies": [
+    { "en": "System Architecture", "fa": "معماری سیستم" }, { "en": "Full-Stack Development", "fa": "توسعه فول‌استک" },
+    { "en": "API Design & Implementation", "fa": "طراحی و پیاده‌سازی API" }, { "en": "Blockchain & Web3", "fa": "بلاکچین و Web3" },
+    { "en": "Cybersecurity", "fa": "امنیت سایبری" }, { "en": "Distributed / Real-Time Systems", "fa": "سیستم‌های توزیع‌شده / بلادرنگ" },
+    { "en": "Technical Leadership", "fa": "رهبری فنی" }, { "en": "Performance & SEO", "fa": "بهینه‌سازی عملکرد و SEO" }
+  ],
+  "practices": [
+    { "en": "Secure-by-design", "fa": "امنیت در طراحی" }, { "en": "API-first architecture", "fa": "معماری API-first" },
+    { "en": "Performance optimization", "fa": "بهینه‌سازی عملکرد" }, { "en": "Scalable architecture", "fa": "معماری مقیاس‌پذیر" },
+    { "en": "Code review & version control", "fa": "بازبینی کد و کنترل نسخه" }, { "en": "Linux-first infrastructure", "fa": "زیرساخت مبتنی بر لینوکس" }
+  ],
+  "philosophy": {
+    "en": "Good systems are boring on purpose: predictable, observable, and automated until only judgment calls remain.",
+    "fa": "سیستم‌های خوب عمداً ساده و قابل‌پیش‌بینی‌اند: پایدار، قابل‌پایش و آن‌قدر خودکار که فقط تصمیم‌های انسانی باقی بماند."
+  },
+  "stats": [
+    { "num": 600, "suf": "+", "label": { "en": "Web projects", "fa": "پروژه وب" } },
+    { "num": 15, "suf": "+", "label": { "en": "E-commerce projects", "fa": "پروژه فروشگاهی" } },
+    { "num": 6, "suf": "+", "label": { "en": "Blockchain projects", "fa": "پروژه بلاکچین" } },
+    { "num": 1, "suf": "M+", "label": { "en": "Peak website users", "fa": "بیشترین کاربران یک سایت" } }
+  ],
+  "highlights": [
+    { "icon": "rocket", "text": { "en": "Delivered and contributed to 600+ web projects", "fa": "توسعه و مشارکت در بیش از ۶۰۰ پروژه وب" }, "metric": { "en": "600+ projects", "fa": "۶۰۰+ پروژه" } },
+    { "icon": "trending-up", "text": { "en": "Contributed to up to 4× sales growth on a client platform", "fa": "مشارکت در افزایش تا ۴ برابری فروش یک پلتفرم مشتری" }, "metric": { "en": "Up to 4× sales", "fa": "تا ۴ برابر فروش" } },
+    { "icon": "users", "text": { "en": "Led a 48-person technical team", "fa": "رهبری یک تیم فنی ۴۸ نفره" }, "metric": { "en": "48-person team", "fa": "تیم ۴۸ نفره" } },
+    { "icon": "cpu", "text": { "en": "Telegram automation tested with 200 accounts; architecture designed for much larger scale", "fa": "اتوماسیون تلگرام، تست‌شده با ۲۰۰ اکانت و طراحی‌شده برای مقیاس بسیار بالاتر" }, "metric": { "en": "200 tested · 10K scale", "fa": "۲۰۰ تست · مقیاس ۱۰هزار" } },
+    { "icon": "server", "text": { "en": "Multi-server tooling tested across approximately 450 servers", "fa": "ابزار مدیریت چندسروره، تست‌شده روی حدود ۴۵۰ سرور" }, "metric": { "en": "450 servers", "fa": "۴۵۰ سرور" } },
+    { "icon": "shield", "text": { "en": "Security-focused engineering with CEH and cybersecurity training", "fa": "مهندسی امنیت‌محور همراه با آموزش CEH و امنیت سایبری" }, "metric": { "en": "Security + CEH", "fa": "امنیت + CEH" } }
+  ],
+  "experience": [
+    {
+      "company": "NYX — Independent Startup", "role": { "en": "Founder · Technical Lead · Full-Stack Engineer", "fa": "بنیان‌گذار · رهبر فنی · مهندس فول‌استک" },
+      "location": { "en": "Remote / Independent", "fa": "ریموت / مستقل" },
+      "dates": { "en": "2025 — Present", "fa": "۲۰۵ — اکنون" }, "current": true,
+      "description": { "en": "Leading a 10-person team building NYX, a privacy-focused decentralized messaging platform with blockchain-based infrastructure.", "fa": "رهبری تیم ۱۰ نفره برای توسعه NYX، یک پیام‌رسان غیرمتمرکز با تمرکز بر حریم خصوصی و زیرساخت مبتنی بر بلاکچین." },
+      "achievements": {
+        "en": [ "Lead architecture and hands-on development across blockchain, messaging, relays, clients, configuration and system components.", "Current implementation has working blockchain and messaging layers, operational relays and clients, and most current options.", "Own technical direction, security, infrastructure and ongoing product expansion." ],
+        "fa": [ "رهبری معماری و توسعه عملی در بخش‌های بلاکچین، پیام‌رسان، Relayها، Clientها، تنظیمات و اجزای سیستم.", "در پیاده‌سازی فعلی، لایه‌های بلاکچین و پیام‌رسان، Relayها و Clientها و بخش عمده گزینه‌های فعلی به‌صورت عملیاتی کار می‌کنند.", "مسئولیت مسیر فنی، امنیت، زیرساخت و توسعه مستمر محصول." ]
+      },
+      "technologies": ["Blockchain","Web3","Real-time Systems","API Design","Security","Linux"]
+    },
+    {
+      "company": "Telegram / Automation Engineering", "role": { "en": "Automation Engineer · Backend Developer", "fa": "مهندس اتوماسیون · توسعه‌دهنده بک‌اند" },
+      "location": { "en": "Independent / Remote", "fa": "مستقل / ریموت" },
+      "dates": { "en": "2022 — Present", "fa": "۲۰۲۲ — اکنون" }, "current": true,
+      "description": { "en": "Built advanced Telegram automation, marketing, account-management and server-management systems for independent and client projects.", "fa": "توسعه سیستم‌های پیشرفته اتوماسیون تلگرام، مارکتینگ، مدیریت اکانت و مدیریت سرور برای پروژه‌های مستقل و مشتریان." },
+      "achievements": {
+        "en": [ "Built a marketing-focused self-bot with approximately 200 commands/options for channel and group management, advertising and customer acquisition.", "Built an automation platform with approximately 150 modules and 200 options for managing many Telegram accounts.", "Personally tested the account-management system with 200 accounts; architecture is designed for substantially larger concurrent scale.", "Built tooling for controlled multi-server resource management and system analysis, tested across approximately 450 servers." ],
+        "fa": [ "ساخت سلف‌بات حرفه‌ای مارکتینگ با حدود ۲۰۰ دستور/گزینه برای مدیریت کانال و گروه، تبلیغات و جذب مشتری.", "ساخت پلتفرم اتوماسیون با حدود ۱۵۰ ماژول و ۲۰۰ گزینه برای مدیریت تعداد زیادی اکانت تلگرام.", "تست عملی سیستم مدیریت اکانت با ۲۰ اکانت؛ معماری سیستم برای مقیاس هم‌زمان بسیار بالاتر طراحی شده است.", "توسعه ابزار مدیریت کنترل‌شده منابع چندین سرور و تحلیل سیستم‌ها، با تست روی حدود ۴۵۰ سرور." ]
+      },
+      "technologies": ["Python","FastAPI","Telegram API","Automation","Linux","Redis","Docker"]
+    },
+    {
+      "company": "Digital Electronics E-commerce", "role": { "en": "Full-Stack Developer · Technical Manager", "fa": "توسعه‌دهنده فول‌استک · مدیر فنی" },
+      "location": { "en": "Tehran, Iran", "fa": "تهران، ایران" },
+      "dates": { "en": "2025", "fa": "۲۰۵" }, "current": false,
+      "description": { "en": "Sole developer and technical owner of a professional e-commerce platform for digital products.", "fa": "توسعه‌دهنده اصلی و مسئول فنی یک پلتفرم حرفه‌ای فروشگاهی در حوزه لوازم دیجیتال." },
+      "achievements": {
+        "en": [ "Built, managed and continuously supported the e-commerce platform.", "Improved performance, user experience and operational efficiency.", "Contributed to higher sales and user growth while reducing unnecessary advertising costs." ],
+        "fa": [ "ساخت، مدیریت و پشتیبانی مستمر پلتفرم فروشگاهی.", "بهبود سرعت، تجربه کاربری و بهره‌وری عملیاتی.", "کمک به افزایش فروش و کاربران و کاهش هزینه‌های غیرضروری تبلیغات." ]
+      },
+      "technologies": ["PHP","Laravel","JavaScript","HTML","CSS","MySQL","SEO","Performance Optimization"]
+    },
+    {
+      "company": "Moaaz Art & Music Institute", "role": { "en": "Web Developer · SEO & Optimization Specialist", "fa": "توسعه‌دهنده وب · متخصص SEO و بهینه‌سازی" },
+      "location": { "en": "Tehran, Iran", "fa": "تهران، ایران" },
+      "dates": { "en": "2023 — 2024", "fa": "۲۰۲۳ — ۲۰۲۴" }, "current": false,
+      "description": { "en": "Sole developer responsible for designing, building, optimizing and supporting the institute's website.", "fa": "توسعه‌دهنده اصلی و تنها مسئول طراحی، توسعه، بهینه‌سازی و پشتیبانی وب‌سایت مؤسسه." },
+      "achievements": {
+        "en": [ "Designed and delivered the website end-to-end as a solo project.", "Implemented technical SEO, performance optimization and ongoing maintenance.", "Improved the platform's usability and digital presence, contributing to significant growth in users and customers." ],
+        "fa": [ "طراحی و اجرای کامل وب‌سایت به‌صورت انفرادی از ابتدا تا انتها.", "پیاده‌سازی SEO فنی، بهینه‌سازی عملکرد و پشتیبانی مستمر.", "بهبود تجربه کاربری و حضور دیجیتال و کمک به رشد قابل‌توجه کاربران و مشتریان." ]
+      },
+      "technologies": ["HTML","CSS","JavaScript","Bootstrap","SEO","Performance Optimization"]
+    },
+    {
+      "company": "Blockchain Startup — Germany", "role": { "en": "Blockchain Engineer · Full-Stack Developer · Security Specialist", "fa": "مهندس بلاکچین · توسعه‌دهنده فول‌استک · متخصص امنیت" },
+      "location": { "en": "Germany / Remote", "fa": "آلمان / ریموت" },
+      "dates": { "en": "2023 — 2024", "fa": "۲۰۲۳ — ۲۰۲۴" }, "current": false,
+      "description": { "en": "Independent technical contributor on blockchain infrastructure and application development for a Germany-based client.", "fa": "همکار فنی مستقل در توسعه زیرساخت و اپلیکیشن‌های بلاکچینی برای یک پروژه مستقر در آلمان." },
+      "achievements": {
+        "en": [ "Designed and implemented a custom blockchain network and supporting application components.", "Worked independently across architecture, development and security.", "Helped strengthen the product's technical foundation, credibility and delivery capabilities." ],
+        "fa": [ "طراحی و پیاده‌سازی یک شبکه بلاکچینی اختصاصی و اجزای نرم‌افزاری مرتبط.", "فعالیت مستقل در معماری، توسعه و امنیت.", "تقویت زیرساخت فنی، اعتبار و توان اجرایی محصول." ]
+      },
+      "technologies": ["Blockchain","Web3","Smart Contracts","EVM","Solidity","Web3.js","Ethers.js","Security"]
+    },
+    {
+      "company": "Marketplace Startup — 48-Person Team", "role": { "en": "Lead Developer · Technical Team Lead", "fa": "لید دولوپر · سرپرست تیم فنی" },
+      "location": { "en": "Remote", "fa": "ریموت" },
+      "dates": { "en": "2023", "fa": "۲۰۲" }, "current": false,
+      "description": { "en": "Formed and led a 48-person team to build a large-scale marketplace-style startup.", "fa": "تشکیل و رهبری یک تیم ۴۸ نفره برای ساخت یک استارتاپ Marketplace در مقیاس بزرگ." },
+      "achievements": {
+        "en": [ "Led the overall technical group and contributed to website architecture, system architecture and core development.", "Coordinated multiple technical roles and participated directly in key implementation decisions.", "Project was paused after approximately four months because financial support was not secured." ],
+        "fa": [ "رهبری گروه فنی و مشارکت در معماری وب‌سایت، معماری سیستم و توسعه بخش‌های اصلی.", "هماهنگی نقش‌های فنی مختلف و مشارکت مستقیم در تصمیم‌های کلیدی پیاده‌سازی.", "پروژه پس از حدود چهار ماه به‌دلیل تأمین نشدن حمایت مالی متوقف شد." ]
+      },
+      "technologies": ["System Architecture","Web Development","APIs","Databases","Team Leadership","Project Management"]
+    },
+    {
+      "company": "Oman Client — Web Platform", "role": { "en": "Full-Stack Web Developer · Technical Owner", "fa": "توسعه‌دهنده فول‌استک وب · مسئول فنی" },
+      "location": { "en": "Oman", "fa": "عمان" },
+      "dates": { "en": "2022 — 2023", "fa": "۲۰۲ — ۲۰۳" }, "current": false,
+      "description": { "en": "Worked in a two-person team and owned the full web-development and systems scope for a major redesign and modernization.", "fa": "عضو تیم دو نفره و مسئول کل بخش توسعه وب و سیستم‌ها در بازطراحی و نوسازی اساسی پروژه." },
+      "achievements": {
+        "en": [ "Rebuilt and modernized a severely outdated website and its supporting systems.", "Improved security, SEO, performance and overall user experience.", "Contributed to approximately 4× sales growth, increased customer acquisition and substantially improved site speed.", "Worked across frontend, backend and architecture using React, Next.js, Vue, PHP and Laravel." ],
+        "fa": [ "بازطراحی و بازسازی کامل یک وب‌سایت قدیمی و ضعیف به‌همراه سیستم‌های پشتیبان.", "بهبود امنیت، SEO، سرعت و تجربه کاربری.", "مشارکت در افزایش حدود ۴ برابری فروش، رشد جذب مشتری و بهبود چشمگیر سرعت سایت.", "فعالیت در فرانت‌اند، بک‌اند و معماری با React، Next.js، Vue، PHP و Laravel." ]
+      },
+      "technologies": ["React","Next.js","JavaScript","TypeScript","Vue","PHP","Laravel","SEO","Security"]
+    }
+  ],
+  "caseStudy": {
+    "title": { "en": "NYX — Decentralized Messaging Platform", "fa": "NYX — پلتفرم پیام‌رسان غیرمتمرکز" },
+    "challenge": { "en": "Build a professional, privacy-focused messaging platform with decentralized infrastructure rather than relying on a conventional centralized architecture.", "fa": "ساخت یک پیام‌رسان حرفه‌ای و متمرکز بر حریم خصوصی با زیرساخت غیرمتمرکز، به‌جای تکیه بر معماری کاملاً متمرکز سنتی." },
+    "approach": { "en": "Designed and implemented the blockchain and messaging architecture alongside relays, clients, configuration layers, security and supporting infrastructure; currently leading a 10-person development team.", "fa": "طراحی و پیاده‌سازی معماری بلاکچین و پیام‌رسان همراه با Relayها، Clientها، لایه‌های تنظیمات، امنیت و زیرساخت‌های پشتیبان؛ با رهبری تیم توسعه ۱۰ نفره." },
+    "outcome": { "en": "The current implementation has working blockchain and messaging layers, operational relays and clients, and most current options. The product remains under active development and expansion.", "fa": "در پیاده‌سازی فعلی، لایه‌های بلاکچین و پیام‌رسان، Relayها و Clientها و بخش عمده گزینه‌های فعلی عملیاتی هستند. محصول همچنان در حال توسعه و گسترش است." },
+    "metrics": [ { "en": "10-person team", "fa": "تیم ۱۰ نفره" }, { "en": "Working blockchain & messaging", "fa": "بلاکچین و پیام‌رسان عملیاتی" }, { "en": "Operational relays & clients", "fa": "Relay و Client عملیاتی" }, { "en": "Active development", "fa": "توسعه فعال" } ],
+    "tech": ["Blockchain","Web3","Real-time Systems","API Design","Security","Linux"]
+  },
+  "projects": [
+    { "name": "NYX", "note": { "en": "Decentralized, privacy-focused messaging platform currently under active development; blockchain, messaging, relays, clients and configuration layers are operational.", "fa": "پیام‌رسان غیرمتمرکز با تمرکز بر حریم خصوصی؛ در حال توسعه فعال، با لایه‌های عملیاتی بلاکچین، پیام‌رسان، Relay، Client و تنظیمات." }, "tech": "Blockchain · Web3 · Real-time · Security · Linux" },
+    { "name": "Telegram Automation Suite", "note": { "en": "Large-scale automation and account-management system with ~150 modules and ~200 options; tested with 200 accounts.", "fa": "سیستم اتوماسیون و مدیریت اکانت در مقیاس بالا با حدود ۱۵۰ ماژول و ۲۰۰ گزینه؛ تست‌شده با ۲۰ اکانت." }, "tech": "Python · Telegram API · FastAPI · Linux" },
+    { "name": "Telegram Marketing Self-Bot", "note": { "en": "Marketing and channel/group management automation with approximately 200 commands/options for promotion and customer acquisition workflows.", "fa": "سلف‌بات مارکتینگ و مدیریت کانال/گروه با حدود ۲۰۰ دستور و گزینه برای تبلیغات و جذب مشتری." }, "tech": "Python · Telegram API · Automation" },
+    { "name": "Multi-Server Control Platform", "note": { "en": "Centralized tooling for managing resources and analyzing multiple servers; tested across approximately 450 servers.", "fa": "ابزار متمرکز برای مدیریت منابع و تحلیل چندین سرور؛ تست‌شده روی حدود ۴۵۰ سرور." }, "tech": "Linux · Docker · Networking · Monitoring" },
+    { "name": "Interactive Pizza Platform", "note": { "en": "Interactive startup platform where users build their own pizzas with a visual 3D representation of the result.", "fa": "پلتفرم تعاملی استارتاپی که کاربر پیتزای خود را می‌ساخت و نتیجه با نمایش سه‌بعدی به او نشان داده می‌شد." }, "tech": "Web · 3D · Interactive UI · Startup" },
+    { "name": "Beauty Appointment Platform", "note": { "en": "Startup concept for a nationwide appointment marketplace for beauty professionals, developed by a multi-person team.", "fa": "پلتفرم استارتاپی برای نوبت‌دهی سراسری متخصصان حوزه زیبایی، توسعه‌یافته توسط یک تیم چندنفره." }, "tech": "Web · Marketplace · APIs · Product Development" },
+    { "name": "WordPress-to-Telegram Commerce Tool", "note": { "en": "Tool connecting WordPress stores to Telegram so merchants can manage and sell products through Telegram.", "fa": "ابزار اتصال فروشگاه‌های وردپرسی به تلگرام برای مدیریت و فروش محصولات از داخل تلگرام." }, "tech": "WordPress · PHP · APIs · Telegram" },
+    { "name": "Selected Portfolio Scale", "note": { "en": "600+ web projects overall, including 15+ e-commerce projects and approximately 6 blockchain projects across client, startup and independent engagements.", "fa": "بیش از ۶۰۰ پروژه وب در مجموع، شامل بیش از ۱۵ پروژه فروشگاهی و حدود ۶ پروژه بلاکچین در پروژه‌های مشتری، استارتاپی و مستقل." }, "tech": "Full-Stack · E-commerce · Blockchain · APIs · Security · SEO" }
+  ],
+  "skills": [
+    { "category": { "en": "Frontend", "fa": "فرانت‌اند" }, "items": [ { "name": "HTML / CSS", "level": 95 }, { "name": "JavaScript", "level": 95 }, { "name": "TypeScript", "level": 92 }, { "name": "React / Next.js", "level": 92 }, { "name": "Vue", "level": 88 }, { "name": "Angular", "level": 80 }, { "name": "Tailwind / Bootstrap", "level": 90 } ] },
+    { "category": { "en": "Backend", "fa": "بک‌اند" }, "items": [ { "name": "PHP / Laravel / MVC", "level": 93 }, { "name": "Python / FastAPI", "level": 92 }, { "name": "API Design", "level": 94 }, { "name": "C / C++ / C#", "level": 82 }, { "name": "Go", "level": 75 }, { "name": "Rust", "level": 70 } ] },
+    { "category": { "en": "Data", "fa": "داده و دیتابیس" }, "items": [ { "name": "MySQL", "level": 90 }, { "name": "PostgreSQL", "level": 88 }, { "name": "SQLite", "level": 85 }, { "name": "Redis", "level": 85 }, { "name": "MongoDB / NoSQL", "level": 82 } ] },
+    { "category": { "en": "Cloud / DevOps", "fa": "کلاد / دواپس" }, "items": [ { "name": "Linux", "level": 94 }, { "name": "Docker", "level": 88 }, { "name": "AWS", "level": 80 }, { "name": "Nginx / Apache", "level": 88 }, { "name": "CI/CD", "level": 78 }, { "name": "Kubernetes", "level": 68 } ] },
+    { "category": { "en": "Blockchain / Web3", "fa": "بلاکچین / Web3" }, "items": [ { "name": "Solidity / Smart Contracts", "level": 82 }, { "name": "EVM", "level": 82 }, { "name": "Web3.js / Ethers.js", "level": 82 }, { "name": "Blockchain Architecture", "level": 88 } ] },
+    { "category": { "en": "Security / AI / SEO", "fa": "امنیت / هوش مصنوعی / SEO" }, "items": [ { "name": "Web Security / Ethical Hacking", "level": 88 }, { "name": "CEH Training", "level": 82 }, { "name": "LLM / RAG", "level": 78 }, { "name": "Prompt Engineering", "level": 88 }, { "name": "Technical SEO", "level": 90 } ] }
+  ],
+  "techStack": ["HTML5","CSS3","JavaScript","TypeScript","React","Next.js","Vue","Angular","Bootstrap","Tailwind CSS","PHP","Laravel","MVC","Python","FastAPI","C","C++","C#","Go","Rust","Java","Android","API Design","WebSocket","REST","MySQL","PostgreSQL","SQLite","Redis","MongoDB","NoSQL","Linux","Docker","AWS","Nginx","Apache","CI/CD","Kubernetes","Git","GitHub","Solidity","EVM","Smart Contracts","Web3.js","Ethers.js","Blockchain","Telegram API","SEO","LLM","RAG","Prompt Engineering"],
+  "education": [
+    { "degree": { "en": "B.Sc. Software Engineering", "fa": "کارشناسی مهندسی نرم‌افزار  " }, "school": { "en": "University of Zanjan", "fa": "دانشگاه زنجان" }, "dates": { "en": "2016 — 2020", "fa": "۲۰۱۶ — ۲۰۲۰" }, "note": { "en": "Focus on distributed systems, databases and web engineering.", "fa": "با تمرکز بر سیستم‌های توزیع‌شده، پایگاه داده و مهندسی وب." } },
+    { "degree": { "en": "Diploma — Mathematics & Physics", "fa": "دیپلم ریاضی و فیزیک  " }, "school": { "en": "Abhar, Iran", "fa": "ابهر، ایران" }, "dates": { "en": "2012 — 2016", "fa": "۲۰۱۲ — ۲۰۱۶" } }
+  ],
+  "certifications": [
+    { "name": "AWS Solutions Architect — Associate", "year": "2023" },
+    { "name": "CKA: Certified Kubernetes Administrator", "year": "2022" },
+    { "name": "HashiCorp Terraform Associate", "year": "2021" }
+  ],
+  "languages": [
+    { "name": { "en": "Persian", "fa": "فارسی" }, "level": { "en": "Native", "fa": "زبان مادری" }, "dots": 5 },
+    { "name": { "en": "Turkish", "fa": "ترکی" }, "level": { "en": "Fluent", "fa": "مسلط" }, "dots": 4 },
+    { "name": { "en": "English", "fa": "انگلیسی" }, "level": { "en": "Upper-Intermediate", "fa": "متوسط رو به بالا" }, "dots": 4 },
+    { "name": { "en": "Arabic", "fa": "عربی" }, "level": { "en": "Intermediate", "fa": "متوسط" }, "dots": 3 },
+    { "name": { "en": "German", "fa": "آلمانی" }, "level": { "en": "Learning", "fa": "در حال یادگیری" }, "dots": 2 },
+    { "name": { "en": "Russian", "fa": "روسی" }, "level": { "en": "Learning", "fa": "در حال یادگیری" }, "dots": 2 }
+  ],
+  "testimonials": [
+    { "quote": { "en": "Amir took our hopelessly outdated platform and turned it into a fast, secure, high-converting product. Sales grew roughly 4×.", "fa": "امیر پلتفرم قدیمی و ضعیف ما را به محصولی سریع، امن و پرفروش تبدیل کرد. فروش تقریباً ۴ برابر شد." }, "name": "Client — Oman Web Platform", "role": { "en": "Business Owner", "fa": "صاحب کسب‌وکار" } },
+    { "quote": { "en": "He owns architecture, security and delivery end-to-end. A rare engineer you can hand the whole system to.", "fa": "او معماری، امنیت و تحویل را از ابتدا تا انتها در دست می‌گیرد. مهندسی کمیاب که می‌توان کل سیستم را به او سپرد." }, "name": "Technical Partner — Blockchain Startup", "role": { "en": "Germany", "fa": "آلمان" } },
+    { "quote": { "en": "Coordinated a 48-person technical team with clarity and led the core architecture himself.", "fa": "یک تیم فنی ۴۸ نفره را با شفافیت هماهنگ کرد و خودش معماری هسته را پیش برد." }, "name": "Project Manager — Marketplace Startup", "role": { "en": "Remote", "fa": "ریموت" } }
+  ],
+  "speaking": [
+    { "type": "talk", "title": { "en": "Decentralized Messaging in Practice", "fa": "پیام‌رسانی غیرمتمرکز در عمل  " }, "venue": { "en": "Iran Dev Meetup — Online", "fa": "میت‌آپ توسعه‌دهندگان ایران — آنلاین" }, "year": "2025" },
+    { "type": "writing", "title": { "en": "POUW System", "fa": "ماین کردن به ازای مقدار کار مفید انجام شده" }, "venue": { "en": "Personal Blog", "fa": "وبلاگ شخصی" }, "year": "2024" },
+    { "type": "writing", "title": { "en": "Telegram Automation at Scale: Lessons from 200 Accounts", "fa": "اتوماسیون تلگرام در مقیاس: درس‌هایی از ۲۰ اکانت  " }, "venue": { "en": "Personal Blog", "fa": "وبلاگ شخصی" }, "year": "2024" },
+    { "type": "writing", "title": { "en": "Security-First API Design Checklist", "fa": "چک‌لیست طراحی API با اولویت امنیت  " }, "venue": { "en": "Personal Blog", "fa": "وبلاگ شخصی" }, "year": "2023" }
+  ],
+  "community": [
+    { "role": { "en": "Mentor", "fa": "منتور  " }, "org": { "en": "Persian Web Developer Community", "fa": "جامعه توسعه‌دهندگان وب فارسی" }, "dates": { "en": "2022 — Present", "fa": "۲۰۲۲ — اکنون" } },
+    { "role": { "en": "Open-Source Contributor", "fa": "مشارکت‌کننده متن‌باز  " }, "org": { "en": "Telegram Automation Tooling", "fa": "ابزارهای اتوماسیون تلگرام" }, "dates": { "en": "2021 — Present", "fa": "۲۰۲۱ — اکنون" } },
+    { "role": { "en": "Volunteer Instructor", "fa": "مدرس داوطلب  " }, "org": { "en": "Free Coding Workshops — Abhar", "fa": "کارگاه‌های برنامه‌نویسی رایگان — ابهر" }, "dates": { "en": "2020 — 2021", "fa": "۲۰۲۲ — اکنون" } }
+  ],
+  "references": [
+    { "name": "Arash Karimi", "role": { "en": "Product Manager — NYX", "fa": "مدیر محصول — NYX" }, "contact": "arash.k@nyx.example", "relation": { "en": "Colleague", "fa": "همکار" } },
+    { "name": "Sara Mohammadi", "role": { "en": "Client — Digital Electronics Store", "fa": "مشتری — فروشگاه لوازم دیجیتال" }, "contact": "sara.m@example.com", "relation": { "en": "Client", "fa": "مشتری" } }
+  ],
+  "achievements": [
+    { "text": { "en": "Delivered 600+ web projects across client, startup and independent engagements", "fa": "تحویل بیش از ۶۰۰ پروژه وب در پروژه‌های مشتری، استارتاپی و مستقل" } },
+    { "text": { "en": "Architected and shipped a custom blockchain network for a Germany-based client", "fa": "طراحی و تحویل یک شبکه بلاکچینی اختصاصی برای مشتری مستقر در آلمان" } },
+    { "text": { "en": "Scaled Telegram account management to 200 concurrent accounts in production testing", "fa": "مقیاس‌دهی مدیریت اکانت تلگرام تا ۲۰۰ اکانت هم‌زمان در تست عملی" } },
+    { "text": { "en": "Led a 48-person technical team for a large-scale marketplace build", "fa": "رهبری تیم فنی ۴۸ نفره برای ساخت یک Marketplace بزرگ‌مقیاس" } }
+  ],
+  "interests": [
+    { "en": "Blockchain & Web3 research", "fa": "پژوهش بلاکچین و Web3" },
+    { "en": "Cybersecurity & CTF challenges", "fa": "امنیت سایبری و چالش‌های CTF" },
+    { "en": "Open-source contribution", "fa": "مشارکت متن‌باز" },
+    { "en": "Distributed systems", "fa": "سیستم‌های توزیع‌شده" },
+    { "en": "Astronomy & sci-fi", "fa": "نجوم و علمی‌تخیلی" }
+  ]
+}
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>
